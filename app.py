@@ -2,9 +2,12 @@ from flask import Flask
 import json
 from AutoExtractLec.AutoExtractLecture import AutoExtractLec
 from Config.MyConfig import MyConfig
+from Commons.PathParser import GetAbsPath
 
-myConfig = MyConfig('./Config/dev.yaml')
 app = Flask(__name__)
+devPath = GetAbsPath('dev.yaml', app.root_path, 'Config')
+proPath = GetAbsPath('pro.yaml', app.root_path, 'Config')
+myConfig = MyConfig(devPath)
 
 
 @app.route('/')
