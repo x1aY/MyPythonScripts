@@ -10,9 +10,13 @@ class MyConfig:
 
     myMongoPwd = ''
 
-    def __init__(self, envPath):
+    wxToken = ''
+
+    @classmethod
+    def initConfig(cls, envPath):
         yamlData = ReadYaml(envPath)
-        self.debug = yamlData['debug']
-        self.myPort = yamlData['myPort']
-        self.myMongoHost = yamlData['myMongoHost']
-        self.myMongoPwd = yamlData['myMongoPwd']
+        cls.debug = yamlData['debug']
+        cls.myPort = yamlData['myPort']
+        cls.myMongoHost = yamlData['myMongoHost']
+        cls.myMongoPwd = yamlData['myMongoPwd']
+        cls.wxToken = yamlData['wxToken']
