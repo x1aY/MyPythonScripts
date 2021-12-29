@@ -10,7 +10,7 @@ appContext.push()
 from Commons.PathParser import proPath, devPath
 from Config.MyConfig import MyConfig
 
-MyConfig.initConfig(devPath)
+MyConfig.initConfig(proPath)
 
 # 注册蓝图
 from Routes.wxRouter import wxRouter

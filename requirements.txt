@@ -5,3 +5,4 @@ pyyaml~=6.0
 requests~=2.26.0
 beautifulsoup4~=4.10.0
 xmltodict~=0.12.0
+flask-Cors~=3.0.10
