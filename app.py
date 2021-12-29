@@ -1,6 +1,8 @@
-from flask import Flask, send_from_directory
+from flask import Flask
+from flask_cors import CORS
 
 app = Flask(__name__, static_url_path='')
+CORS(app, supports_credentials=True)
 appContext = app.app_context()
 appContext.push()
 
@@ -8,7 +10,7 @@ appContext.push()
 from Commons.PathParser import proPath, devPath
 from Config.MyConfig import MyConfig
 
-MyConfig.initConfig(proPath)
+MyConfig.initConfig(devPath)
 
 # 注册蓝图
 from Routes.wxRouter import wxRouter
