@@ -17,7 +17,7 @@ from Routes.wxRouter import wxRouter
 from Routes.scriptRouter import scriptRouter
 
 app.register_blueprint(blueprint=wxRouter, url_prefix='/wx')
-app.register_blueprint(blueprint=scriptRouter, url_prefix='/script')
+app.register_blueprint(blueprint=scriptRouter, url_prefix='/myScripts')
 
 appContext.pop()
 
